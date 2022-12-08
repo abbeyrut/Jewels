@@ -5,7 +5,10 @@ import { useState } from "react";
 export default function Cart() {
     const [item, setItem] = useState(0);
     function decrement(){
-        setItem(item - 1);
+      if (item > 0 ){
+          setItem(item -1);
+        }
+
     }
  
 
